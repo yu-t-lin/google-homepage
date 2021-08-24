@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: space-between;
   padding: 10px;
-
+  /*align-items: center;*/
   position: fixed;
   width: 100%;
   left: 0px;
@@ -27,7 +27,6 @@ body {
 
 .nav-f-child-1 {
   flex-grow: 1;
-
   display: flex;
   align-items: center;
   border: 2px solid red;
@@ -36,7 +35,6 @@ body {
 .nav-f-child-2 {
   flex-grow: 1;
   padding-right: 15px;
-  /*align-items: center;*/
   border: 2px solid red;
 }
 
@@ -66,4 +64,49 @@ body {
 
 .nav-f-container li:hover {
   text-decoration: underline;
+}
+
+/*Grid Box Container*/
+.grid-box-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 2fr 1fr 1fr 1fr;
+  gap: 20px; /*spacing between rows*/
+  margin: auto; /*centers google container*/
+  margin-top: 150px; /*nav bar spacing*/
+  width: 700px; /*all elements within*/
+  padding: 10px;
+  border: 2px solid green;
+}
+
+.google-logo-grid {
+  grid-column: 1 / 5; /*takes up all four columns*/
+  grid-row: 1;
+}
+
+.search-bar-grid {
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 2; /*so icon does not overlap bar*/
+}
+
+.search-input-grid {
+  grid-column: 1 / 5;
+  grid-row: 2;
+  border: 2px solid blue;
+}
+
+.first-button-grid {
+  grid-column: 2 / 3;
+  grid-row: 3;
+}
+
+.second-button-grid {
+  grid-column: 3 / 4;
+  grid-row: 3;
+}
+
+.fourth-row-grid {
+  grid-column: 2 / 4;
+  grid-row: 4;
 }

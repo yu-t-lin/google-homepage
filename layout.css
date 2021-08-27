@@ -117,19 +117,25 @@ body {
 }
 
 /*Formatting search bar*/
-.search-input-grid {
+.search-bar {
   width: 80%;
   height: 2.5rem;
-  padding: 0.25rem 4rem;
+  padding: 0.25rem 4rem; /* top-bottom and left-right, to give space for icon */
+
   border: 1px solid #ced4da;
   border-radius: 2rem;
-  display: block;
+
+  display: block; /* to center our search bar */
   margin-left: auto;
   margin-right: auto;
 }
 
-.search-input-grid:hover {
+.search-bar:hover {
   filter: drop-shadow(4px 4px 5px #ced4da);
+}
+
+.search-bar:focus {
+  outline: none;
 }
 
 .search-icon {

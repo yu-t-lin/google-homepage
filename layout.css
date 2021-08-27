@@ -1,7 +1,7 @@
 /* Styling */
 
 body {
-  font-family: arial, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: white;
 }
 
@@ -16,8 +16,6 @@ body {
   width: 100%;
   left: 0px;
   top: 0px;
-
-  border: 2px solid red;
 }
 
 .nav-f-container a {
@@ -29,13 +27,11 @@ body {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  border: 2px solid red;
 }
 
 .nav-f-child-2 {
   flex-grow: 1;
   padding-right: 15px;
-  border: 2px solid red;
 }
 
 /*Formatting the links*/
@@ -49,15 +45,15 @@ body {
 
 .nav-bar-2 {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-align: right;
 }
 
 .nav-f-container li {
   display: inline-block; /*organizes horizontally beside each element*/
   padding: 5px; /*spacing top and bottom*/
-  margin: 0;
+  margin: 0px 5px;
   color: #222222;
   font-size: 14px;
 }
@@ -76,112 +72,111 @@ body {
   margin-top: 150px; /*nav bar spacing*/
   width: 700px; /*all elements within*/
   padding: 10px;
-  border: 2px solid green;
 }
 
 .google-logo-grid {
   grid-column: 1 / 5; /*takes up all four columns*/
   grid-row: 1;
-  border: 2px solid blue;
 }
 
-.search-bar-grid {
+/*Search Icon*/
+.search-icon-grid {
   grid-column: 1;
   grid-row: 2;
   z-index: 2; /*so icon does not overlap bar*/
-  border: 2px solid blue;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 
+/*Outer Div for Search Bar*/
 .search-input-grid {
   grid-column: 1 / 5;
   grid-row: 2;
-  border: 2px solid blue;
 }
 
 .first-button-grid {
   grid-column: 2 / 3;
   grid-row: 3;
-  border: 2px solid blue;
 }
 
 .second-button-grid {
   grid-column: 3 / 4;
   grid-row: 3;
-  border: 2px solid blue;
 }
 
 .fourth-row-grid {
   grid-column: 2 / 4;
   grid-row: 4;
-  border: 2px solid blue;
 }
 
 .google-logo {
   width: 300px;
   display: block; /*center logo*/
-  margin-left: auto;
+  margin-left: auto; /*equal distance*/
   margin-right: auto;
 }
 
 /*Formatting search bar*/
-.search-bar-grid {
-  display: block;
-  margin-left: 20px;
-  margin-top: 10px;
-  z-index: 1;
-}
-
 .search-input-grid {
   width: 80%;
   height: 2.5rem;
-  padding: 0.25rem; /*spacing all around to give space for icon*/
-  border: 1px solid #dfe1e5;
+  padding: 0.25rem 4rem;
+  border: 1px solid #ced4da;
   border-radius: 2rem;
-  display: block; /*centers search bar*/
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .search-input-grid:hover {
-  filter: drop-shadow(4px 4px 5px * dfe1ef);
+  filter: drop-shadow(4px 4px 5px #ced4da);
+}
+
+.search-icon {
+  display: block;
+  margin-left: rem;
+  margin-top: rem;
+  z-index: 1;
 }
 
 /*Formatting Google Search and I'm Feeling Lucky in the third row*/
 
-.first-button-grid {
+.first-button {
   width: 150px;
   height: 40px;
   background: #f8f9fa;
-  border-radius: none;
-  cursor: point; /*on hover it will turn into a pointer*/
+  border-radius: 2px;
+  border-style: none;
+  cursor: pointer; /*on hover it will turn into a pointer*/
   display: block; /*position within*/
   margin-left: 20px;
 }
 
-.first-button-grid:hover {
+.first-button:hover {
   border: 2px solid darkgrey;
 }
 
-.first-button-grid:visited {
+.first-button:visited {
   /*when you click on the button*/
   border: 2px solid #4285f4;
 }
 
-.second-button-grid {
+.second-button {
   width: 150px;
   height: 40px;
   background: #f8f9fa;
-  border-radius: none;
-  cursor: point; /*on hover it will turn into a pointer*/
+  border-radius: 2px;
+  border-style: none;
+  cursor: pointer; /*on hover it will turn into a pointer*/
   display: block; /*position within*/
   margin-left: 5px;
 }
 
-.second-button-grid:hover {
+.second-button:hover {
   border: 2px solid darkgrey;
 }
 
-.second-button-grid:visited {
+.second-button:visited {
   /*when you click on the button*/
   border: 2px solid #4285f4;
 }
@@ -198,4 +193,86 @@ body {
 
 .fourth-row-grid a:hover {
   text-decoration: underline;
+}
+
+/*Bottom Tray*/
+
+.tray-f-container {
+  display: flex;
+  flex-direction: space-between;
+  padding: 15px;
+  position: fixed; /*Fixes to the bottom*/
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-color: #f2f2f2;
+}
+
+.tray-f-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tray-f-child-1 {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.tray-f-child-2 {
+  flex-grow: 1;
+  margin-right: 30px;
+}
+
+/*Formatting the links*/
+
+.tray-bar-1 {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  text-align: left;
+}
+
+.tray-bar-2 {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  text-align: right;
+}
+
+.tray-f-container li {
+  display: inline-block; /*organizes horizontally beside each element*/
+  padding: 5px 10px; /*spacing top and bottom*/
+  margin: 0px 5px;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+.tray-f-container li:hover {
+  text-decoration: underline;
+}
+
+.country {
+  display: flex;
+  flex-direction: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  position: fixed; /*Fixes to the bottom*/
+  width: 100%;
+  left: 0px;
+  bottom: 50px;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #dadce0;
+  color: #6f6f6f;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.square-icon {
+  vertical-align: middle;
 }
